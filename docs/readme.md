@@ -92,7 +92,7 @@ $bot = new Nutgram($_ENV['TOKEN']);
 ```
 
 ## Sending messages
-You can send messages with the ```sendMessage``` method. **(TO KNOW HOW TO GET CHATID, PLEASE GO TO RECEIVING [RECEIVING COMMANDS](#receiving-commands) OR YOU CAN START THERE)**
+You can send messages with the ```sendMessage``` method. **(TO KNOW HOW TO GET CHAT ID, PLEASE GO TO RECEIVING [RECEIVING COMMANDS](#receiving-commands) OR YOU CAN START THERE)**
 ```php
 // index.php
 

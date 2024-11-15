@@ -27,20 +27,20 @@ Note: If you're doing a proper project, it is recommended to initialize the proj
 ## Registering bot account, getting and storing API token
 
 1. Message [@BotFather](https://t.me/botfather) to register yout account and get your token.
-![Account registration example](./Account%20registration%20example.jpg)
+![Account registration example](./docs/Account%20registration%20example.jpg)
 
 2. After that, create a ```.env``` file and paste the API key like this ```TOKEN=<<YOUR_API_KEY>>```
  **NOTE: THE .ENV FILE MUST NEVER BE COMMITTED TO ANY REPOSITORY. ALWAYS GIT IGNORE THE ENV FILE**
- ![ENV file example](./ENV%20file%20example.jpg)
+ ![ENV file example](./docs/ENV%20file%20example.jpg)
 
 ## Setup
 1. Run the command ```composer require nutgram/nutgram``` in the command line **(We will be using composer for this tutorial as it's prefered)**.
-   ![Composer install](./Composer%20example.jpg)
+   ![Composer install](./docs/Composer%20example.jpg)
 
    Alternatively, you can downlaod and extract the src file into the root of your project and rename the extracted folder as ```nutgram```. Though, since Composer will not be there to automatically manage package loading, you will need to know how to import the packages into the app. **GOOD LUCK. YOU'LL NEED IT**
-      ![Extracted list](./Extracted%20file%20list.jpg)
+      ![Extracted list](./docs/Extracted%20file%20list.jpg)
 
-2. Create a modules folder and create a file inside of it with the name ```envLoader.php```. Load the ```.env``` file into your app's $_ENV variable with this code **(NTOE: YOU CAN USE ANY OTHER CODE TO LOAD THE ```.ENV``` FILE INTO THE APPLICATION)** and include it back in ```index.php```.
+2. Create a modules folder and create a file inside of it with the name ```envLoader.php```. Load the ```.env``` file into your app's $_ENV variable with this code **(NTOE: YOU CAN USE ANY OTHER CODE TO LOAD THE ```.ENV``` FILE INTO THE APPLICATION)** and include it in ```index.php```.
 ```php
 // envLoader.php
 
@@ -66,7 +66,7 @@ include "./modules/envLoader.php";
 
 # NOTE: THE NEXT SECTION STARTING WILL BE RAN IN THE COMMAND LINE WITH THE ```php``` COMMAND
 
-![Example of php command in use](./Example%20of%20using%20php%20command.jpg)
+![Example of php command in use](./docs/Example%20of%20using%20php%20command.jpg)
 
 <br>
 <br>
@@ -92,7 +92,7 @@ $bot = new Nutgram($_ENV['TOKEN']);
 ```
 
 ## Sending messages
-You can send messages with the ```sendMessage``` method. **(TO KNOW HOW TO GET CHATID, PLEASE GO TO RECEIVING [RECEIVING COMMANDS](#receiving-commands) OR YOU CAN START THERE)**
+You can send messages with the ```sendMessage``` method. **(TO KNOW HOW TO GET CHAT ID, PLEASE GO TO RECEIVING [RECEIVING COMMANDS](#receiving-commands) OR YOU CAN START THERE)**
 ```php
 // index.php
 
@@ -170,7 +170,7 @@ $bot->run();
 
 Result:
 
-![Example of telegram](./Example%20of%20response.jpeg)
+![Example of telegram](./docs/Example%20of%20response.jpeg)
 
 <br>
 <br>
