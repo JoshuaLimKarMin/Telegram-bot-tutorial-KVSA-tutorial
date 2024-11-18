@@ -1,28 +1,26 @@
 <?php
-// Runs composer's auto loader
-include_once './vendor/autoload.php';
-// Runs the env loader
-include './modules/envLoader.php';
+// Imports composer's auto loader
+require_once './vendor/autoload.php';
+// Emports env loader
+require_once './modules/envLoader.php';
 
-// Inports the Nutgram class
+// Inports the Nutgram classes
 use SergiX44\Nutgram\Nutgram;
 
-// Initialize the bot
+// Initialize Nutgram
 $bot = new Nutgram($_ENV['TOKEN']);
 
-// Send a message on startup
-$bot->sendMessage(
-   text: "Hi there! Telegram test bot is now online.",
-   chat_id: 1869267181 /* This is my real account ID. Please do not send any messages to it. */
-);
+// Imports examples
+require './examples/commands.php'; // NOTE: ONLY ENABLE ONE AT A TIME
+// require './examples/commandRegistration.php'; // NOTE: ONLY ENABLE ONE AT A TIME
+// require './examples/textCommands.php';
+// require './examples/sendingMessages.php';
 
-// Detect for commands sent.
-$bot->onCommand('start', function(Nutgram $bot){
-   // Respond to the sender
-   $bot->asResponse()->sendMessage("Online still");
-
-   // Respond to the sender with their channel ID.
-   $bot->asResponse()->sendMessage("Your chat id is \"".$bot->chatId()."\"");
-});
-
+// Initialize bot listeners
 $bot->run();
+
+
+/*
+   This example was made by a JavaScript developer.
+   Almost everything is JavaScript habits.
+*/
